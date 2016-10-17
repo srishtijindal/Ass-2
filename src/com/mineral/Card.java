@@ -173,5 +173,6 @@ public class Card {
     s += "type - " + type + "\n";
     s += "url - " + url + "\n";
 
-
+    return s;
+  }
 }
