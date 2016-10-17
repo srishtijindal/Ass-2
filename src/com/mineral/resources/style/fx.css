@@ -1,0 +1,66 @@
+.fxCardBackground{
+  -fx-background-image: url("../images/Slide66.jpg");
+ -fx-background-size: 100%;
+ -fx-border-color: #ffffff;
+ -fx-border-width: 5;
+}
+
+.fxBigCardStatic{
+ -fx-background-size: 100%;
+ -fx-background-radius: 10;
+ -fx-background-repeat: no-repeat;
+ -fx-border-color: #ffffff;
+ -fx-border-width: 3;
+ -fx-border-radius: 5;
+}
+.fxBigCardImage1{
+ -fx-background-image: url("../images/Slide01.jpg");
+}
+.fxBigCardImage2{
+ -fx-background-image: url("../images/Slide02.jpg");
+}
+.fxBigCardImage3{
+ -fx-background-image: url("../images/Slide03.jpg");
+}
+.fxBigCardImage4{
+ -fx-background-image: url("../images/Slide04.jpg");
+}
+.fxBigCardImage5{
+ -fx-background-image: url("../images/Slide05.jpg");
+}
+.fxBigCardImage6{
+ -fx-background-image: url("../images/Slide06.jpg");
+}
+.fxBigCardImage7{
+ -fx-background-image: url("../images/Slide07.jpg");
+}
+.fxBigCardImage8{ 
+ -fx-background-image: url("../images/Slide08.jpg");
+}
+.fxBigCardImage9{ 
+ -fx-background-image: url("../images/Slide09.jpg");
+}
+
+.fxBG{	
+ -fx-background-image: url("../images/ui/stars.jpg");
+ -fx-background-size: 100%; 
+}
+
+.fxUser{
+ -fx-background-image: url("../images/ui/user.png");
+ -fx-background-size: 100%;
+ -fx-background-position: center bottom;
+ -fx-background-repeat: no-repeat;	
+}
+.fxPlayer{
+ -fx-background-image: url("../images/ui/player.png");
+ -fx-background-size: 100%;
+ -fx-background-position: center bottom;
+ -fx-background-repeat: no-repeat;	
+}
+.fxDealer{
+ -fx-background-image: url("../images/ui/dealer.png");
+ -fx-background-size: 100%;
+ -fx-background-position: center bottom;
+ -fx-background-repeat: no-repeat;	
+}
