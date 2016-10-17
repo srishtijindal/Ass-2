@@ -86,8 +86,7 @@ public class Player {
   public void run(
       Category cat,
       Data data,
-      ArrayList<Card> dealerCards,
-      ArrayList<Player> players,
+
       Pane table,
       Text... text) {
 
