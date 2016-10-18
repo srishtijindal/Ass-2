@@ -32,6 +32,19 @@ public class Card {
       String type,
       String url) {
 
+    this.title = title;
+    this.chemistry = chemistry;
+    this.classification = classification;
+    this.crystalSystem = crystalSystem;
+    this.occurrence = occurrence;
+    this.hardness = hardness;
+    this.specificGravity = specificGravity;
+    this.cleavage = cleavage;
+    this.crustalAbundance = crustalAbundance;
+    this.economicValue = economicValue;
+    this.type = type;
+    this.url = url;
+  }
 
   public Card(String title, String subtitle, String type, String url) {
     this.title = title;
