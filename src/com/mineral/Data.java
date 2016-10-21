@@ -24,11 +24,11 @@ public class Data {
   public Text winersText;
 
   public Pane dealerPane;
-  public Pane firstDealerCard;
-  public Pane middleDealerCard;
-  public Pane lastDealerCard;
-  public BorderPane dealerBorder;
-  public Text dealerTxt;
-  public Text dealerCardCountTxt;
-  public Pane activeCard;
+    public Pane firstDealerCard;
+    public Pane middleDealerCard;
+    public Pane lastDealerCard;
+    public BorderPane dealerBorder;
+    public Text dealerTxt;
+    public Text dealerCardCountTxt;
+    public Pane activeCard;
 }
