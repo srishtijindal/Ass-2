@@ -114,3 +114,48 @@ public class Dealer {
                 String url;
 
                 type = string.item(2).getTextContent();
+
+                title = string.item(3).getTextContent();
+                url = string.item(0).getTextContent();
+
+                if(type.equals("play")){
+
+                    chemistry = string.item(4).getTextContent();
+                    classification = string.item(5).getTextContent();
+                    crystalSystem = string.item(6).getTextContent();
+                    hardness = string.item(7).getTextContent();
+                    specificGravity = string.item(8).getTextContent();
+                    cleavage = string.item(9).getTextContent();
+                    crustalAbundance = string.item(10).getTextContent();
+                    economicValue = string.item(11).getTextContent();
+
+                    Element n = (Element) elem.getElementsByTagName("array").item(0);
+                    NodeList nl = n.getElementsByTagName("item");
+                    int c = nl.getLength();
+
+                    occurrence = new String [c];
+
+                    for(int j = 0; j < c; j++){
+                        occurrence[j] = nl.item(j).getTextContent();
+                    }
+
+                    card = new Card(title, chemistry, classification, crystalSystem,
+                            occurrence, hardness, specificGravity, cleavage, crustalAbundance,
+                            economicValue, type, url);
+
+                }else{
+                    subtitle = string.item(4).getTextContent();
+                    card = new Card(title, subtitle, type, url);
+                }
+
+                cards.add(card);
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+}

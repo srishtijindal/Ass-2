@@ -1113,27 +1113,7 @@ public class DashboardController implements Initializable {
         });
   }
 
-  private void nextPlayer() {
-    Platform.runLater(
-        new Runnable() {
-
-          @Override
-          public void run() {
-
-            try {
-              Thread.sleep(1500);
-            } catch (InterruptedException e) {
-              // TODO Auto-generated catch block
-              e.printStackTrace();
-            }
-
-            Player p = data.players.get(~~(data.playersCount / 2));
-
-            if (p.getId() == data.players.size()) {
-              data.players
-                  .get(0)
-                  .run(
-                      data.category,
+ ,
                       data,
                       data.cards,
                       data.players,
