@@ -24,12 +24,7 @@ public class Main extends Application {
         .add(this.getClass().getResource("resources/style/fx.css").toExternalForm());
     primaryStage.setScene(scene);
 
-    Screen screen = Screen.getPrimary();
-    Rectangle2D bounds = screen.getVisualBounds();
-    primaryStage.setX(bounds.getMinX());
-    primaryStage.setY(bounds.getMinY());
-    primaryStage.setWidth(bounds.getWidth());
-    primaryStage.setHeight(bounds.getHeight());
+
 
     primaryStage.show();
   }
