@@ -802,7 +802,98 @@ public class DashboardController implements Initializable {
     return menuButton;
   }
 
+  private MenuItem getMenuItem(String name) {
 
+    MenuItem mi = new MenuItem(name);
+
+    if (name.equals(MAGNETITE)) {
+
+      int size = data.userCards.getChildren().size();
+      boolean flag = false;
+
+      for (int i = 0; i < size; i++) {
+        Pane p = (Pane) data.userCards.getChildren().get(i);
+        Card card = (Card) p.getUserData();
+
+        if (card.getTitle().equals(MAGNETITE)) {
+          magnetite = p;
+          flag = true;
+          break;
+        }
+      }
+
+      if (!flag) {
+        mi.setDisable(true);
+        return mi;
+      }
+    }
+
+    mi.setOnAction(
+            new EventHandler<ActionEvent>() {
+
+              @Override
+              public void handle(ActionEvent ae) {
+
+                MenuItem mi = (MenuItem) ae.getSource();
+                chooseTrump(mi.getText());
+              }
+            });
+
+    return mi;
+  }
+
+  private void setAllItems() {
+    menuButton.getItems().setAll(mi1, mi2, mi3, mi4, mi5);
+  }
+
+  private void setTrumpOrMagnetite() {
+    menuButton.getItems().addAll(miTrump, miMagnetite);
+  }
+
+  private void chooseTrump(String name) {
+    menuButton.setText(name);
+  }
+
+  private void rightMenuButton(String trump) {
+    if (trump.equals(THE_GEOLOGIST)) {
+      getMenuButton(MENU_BUTTON_DEFAULT);
+
+      mi1 = getMenuItem(HARDNESS);
+      mi2 = getMenuItem(SPECIFIC_GRAVITY);
+      mi3 = getMenuItem(CLEAVAGE);
+      mi4 = getMenuItem(CRUSTAL_ABUNDANCE);
+      mi5 = getMenuItem(ECONOMIC_VALUE);
+
+      setAllItems();
+      return;
+    }
+
+    if (trump.equals(THE_GEOPHYSICIST)) {
+      getMenuButton(MENU_BUTTON_DEFAULT1);
+
+      miTrump = getMenuItem(SPECIFIC_GRAVITY);
+      miMagnetite = getMenuItem(MAGNETITE);
+
+      setTrumpOrMagnetite();
+      return;
+    }
+
+    if (trump.equals(THE_GEMMOLOGIST)) {
+      getTrumpButton(HARDNESS);
+      return;
+    }
+    if (trump.equals(THE_MINERALOGIST)) {
+      getTrumpButton(CLEAVAGE);
+      return;
+    }
+    if (trump.equals(THE_PETROLOGIST)) {
+      getTrumpButton(CRUSTAL_ABUNDANCE);
+      return;
+    }
+    if (trump.equals(THE_MINER)) {
+      getTrumpButton(ECONOMIC_VALUE);
+      return;
+    }
   }
 
   private void showDashboard() {
